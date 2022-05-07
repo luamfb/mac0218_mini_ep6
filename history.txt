@@ -1,2 +1,10 @@
 sudo docker image build . -t custom-caddy:2.5.1
 sudo docker container run -p 12321:80 -d custom-caddy:2.5.1
+sudo docker container ls
+sudo docker container stop cb707f98d6d0
+sudo docker container ls
+sudo docker image build . -t custom-caddy
+sudo docker container run -p 12321:80 -d -v $PWD/site:/usr/src/pages custom-caddy
+sudo docker container ls
+sudo docker container stop 9c89554d03c3
+sudo docker container rm 9c89554d03c3
