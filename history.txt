@@ -1,0 +1,2 @@
+sudo docker image build . -t custom-caddy:2.5.1
+sudo docker container run -p 12321:80 -d custom-caddy:2.5.1
